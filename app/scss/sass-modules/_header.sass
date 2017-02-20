@@ -1,0 +1,178 @@
+// main: ../main.scss
+
+$logo-color: #aaa
+$transparent: rgba(255,255,255,0.8)
+$breakpoint: 850px
+
+header
+  background: $transparent
+  margin-top: 0
+  position: fixed
+  width: 100vw
+  height: 130px
+  z-index: 10
+  background: white
+  display: flex
+  justify-content: center
+  margin: auto
+  ul
+    background: $transparent
+    display: flex
+    justify-content: center
+    padding: 40px
+    @media (max-width: 750px)
+      padding: 0px
+    li
+      background: $transparent
+      //margin: 10px
+      transition: all .2s ease-in-out
+
+  #logo-header-container
+    position: relative
+    margin: 20px
+    background: $transparent
+    width: 130px
+    background: $logo-color
+    height: 130px
+    border-radius: 50%
+    display: flex
+    flex-direction: column
+    justify-content: center
+    transition: all 300ms ease-in-out
+    border: 3px solid $logo-color
+    &:hover
+      border: 3px solid #666
+    a
+      position: absolute
+      top: 0
+      bottom: 0
+      left: 0
+      right: 0
+      background: pink
+    #logo-header
+      margin: 0 auto
+      width: 100px
+      background: $logo-color
+
+#dropdown-button
+  position: absolute
+  top: 20px
+  right: 20px
+  height: 40px
+  width: 40px
+  display: none
+  flex-direction: column
+  justify-content: space-around
+  cursor: pointer
+  z-index: 101
+  span
+    transition: all .2s ease-in-out
+  &:hover > span
+    background-color: #333
+    transform: scale(1.1)
+
+  &.become-x
+    span
+      transform-origin: center
+    span:nth-child(2)
+      opacity: 0
+    span:nth-child(1)
+      transform: rotate(45deg) translateY(10px) translateX(10px)
+    span:nth-child(3)
+      transform: rotate(-45deg) translateY(-10px) translateX(10px)
+
+
+  span
+    height: 3px
+    width: 100%
+    margin: auto
+    background-color: #666
+
+// mobile nav
+
+.mobile-nav
+  position: fixed
+  visibility: hidden
+  transform: translateY(-500px)
+  z-index: 100
+  width: 100vw
+  transition: all .3s ease-in-out
+  ul
+    //border-bottom: 1px solid #999
+    //box-shadow: 1px 1px 1px 1px
+    background: #fff
+    width: 105%
+    margin-left: -20px
+  li
+    padding: 20px
+    &:nth-child(1)
+      padding: 10px 20px
+  &.is-open
+    visibility: visible
+    transform: translateY(0px)
+
+.dropbtn
+  padding: 20px
+  margin-left: -20px
+
+
+@media (min-width: $breakpoint)
+  .mobile-nav.is-open
+    transform: translateY(-500px)
+
+@media (max-width: $breakpoint)
+  .mobile-nav
+    a.link-padding
+      padding: 20px
+
+
+  header
+    display: none
+
+    ul
+      flex-direction: column
+
+  #dropdown-button
+    display: flex
+    position: fixed
+    right: 10px
+
+#logo-header-mobile
+  position: fixed
+  z-index: 10
+  top: -15px
+  left: -15px
+  background: #999
+  width: 95px
+  height: 95px
+  margin: 20px
+  border-radius: 50%
+  display: flex
+  flex-direction: column
+  justify-content: center
+  cursor: pointer
+  border: 1px solid #666
+  transition: all .2s ease-in-out
+  &:hover
+    border: 1px solid #333
+  a
+    position: absolute
+    top: 12px
+    left: -4px
+    z-index: 10
+
+  img
+    margin: 0 auto
+    height: 50px
+    width: 80px
+    background: #999
+  @media (min-width: $breakpoint)
+    display: none
+
+.mobile-white-top-margin
+  top: 0
+  height: 80px
+  background: $transparent
+  position: fixed
+  width: 100%
+  z-index: 1

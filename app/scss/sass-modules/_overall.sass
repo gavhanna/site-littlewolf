@@ -1,0 +1,71 @@
+// main: ../main.scss
+
+$background-color: #fff
+
+*
+  box-sizing: border-box
+  margin: 0
+  padding: 0
+  -webkit-touch-callout: none
+  -webkit-user-select: none
+body
+  background: $background-color
+
+#wrapper
+  position: relative
+  min-height: 100vh
+  display: flex
+  flex-direction: column
+  max-width: 1200px
+  margin: 0 auto
+
+.high-z-index
+  z-index: 1000
+
+.transparent-background
+  background: rgba(255,255,255,0)
+
+.underline-on-hover
+  color: #333
+  text-decoration: none
+
+.underline-on-hover::after
+  content: ''
+  display: block
+  width: 0
+  height: 1px
+  background: #666
+  transition: width .3s
+
+
+.underline-on-hover:hover:after
+  width: 20%
+  transition: width .3s
+
+.overflow-hidden
+  overflow: hidden
+
+.no-mouse-events
+  pointer-events: none
+  transition: none
+
+// overlay for removing dropdown on mobile
+
+.clickable-overlay
+  display: none
+  z-index: -1000
+  width: 100vw
+  height: 100vh
+  cursor: pointer
+  opacity: 0
+  overflow: hidden
+
+  &.on
+    display: block
+    opacity: 1
+    position: fixed
+    top: 0
+    background-color: rgba(255,255,255,0.4)
+    z-index: 99
+    @media (min-width: 850px)
+      z-index: -1000

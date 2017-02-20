@@ -1,0 +1,51 @@
+#talent-page
+  align-self: center
+  margin: auto
+  width: 100%
+  text-align: center
+  display: flex
+  flex-direction: column
+  margin-top: 30vh
+  @media (max-width: 750px)
+    margin-top: 150px
+  h2
+    margin: 10px
+    color: #666
+  p
+    margin-top: -15px
+  i
+    font-size: 2.5rem
+    transition: all 200ms ease-in-out
+
+  .collabs-wrapper
+    display: flex
+    flex: 1
+    flex-wrap: wrap
+    justify-content: space-around
+    max-width: 700px
+    margin: 0 auto
+
+    .collabs
+      margin: 30px
+      padding: 30px
+      border: solid 3px rgba(30, 30, 30, 0.2)
+      border-radius: 4px
+      h2
+        cursor: default
+      i
+        cursor: pointer
+      @media (max-width: 560px)
+        i
+          color: #666
+        .fa-facebook:hover
+          color: blue
+        .fa-instagram:hover
+          color: #e43463
+
+
+    .collab-logo
+      width: 200px
+      height: 200px
+      margin: 10px 10px 20px 10px
+      border-radius: 50%
+      border: 2px solid #666
