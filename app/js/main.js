@@ -6,6 +6,26 @@ $(document).ready(function(){
     $(this).toggleClass("become-x");
   });
 
+  $(".clickable-overlay").on("click",function(){
+    $(".mobile-nav").toggleClass("is-open");
+    $(".clickable-overlay").toggleClass("on");
+    $("#dropdown-button").toggleClass("become-x")
+  });
+
+
+
+  $("#video-menu-button").on("click", function(){
+    $(".side-nav").toggleClass("open");
+    $("#video-page-wrapper").toggleClass("pushed");
+    $(".click-to-close").toggleClass("cover");
+  });
+
+  $(".click-to-close").on("click", function(){
+    $(".side-nav").toggleClass("open");
+    $("#video-page-wrapper").toggleClass("pushed");
+    $(".click-to-close").toggleClass("cover");
+  });
+
   $("#video-wrapper").fitVids()
 
   $( '.swipebox' ).swipebox({
