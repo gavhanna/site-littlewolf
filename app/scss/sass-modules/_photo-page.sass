@@ -3,7 +3,7 @@
 #photo-page-wrapper
   display: flex
   margin-top: 0px
-  max-width: 900px
+  max-width: 100%
   margin: 0 auto
 
   #photo-wrapper > .side-nav
@@ -13,16 +13,33 @@
   #photo-wrapper
     margin: 150px auto 0px auto
     width: 100%
+    display: flex
+    justify-content: center
+    > a
+      padding: 0 10px
+      .title
+        display: block
+        width: 100%
+        text-align: right
     > a img
       width: 100%
       height: auto
       margin: 0 auto
+    .portrait
+      width: 50%
+      #portrait
+        .title
+          display: block
+          width: 100%
+          text-align: right
+        width: 100%
+        margin: 0 auto
 
   #text-wrapper
     margin: 20px 20px
 
   > .photo-side-nav
-    margin: 130px 10px 5px 5px
+    margin: 128px 10px 5px 5px
     padding: 2px
     .photo-side-thumbs
       .photo-side-thumb-container
@@ -57,7 +74,12 @@
   display: none
 
 @media screen and (max-width: 800px)
-  #main-content
+  #photo-wrapper
+    display: none
+    > a
+      display: none
+
+  .portrait
     display: none
 
   #photo-page-wrapper
