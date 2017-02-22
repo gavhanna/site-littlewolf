@@ -1,0 +1,48 @@
+// main: ../main.scss
+
+#video-page-wrapper
+  display: flex
+  margin-top: 0px
+
+  #video-wrapper > .side-nav
+    margin: 0
+
+
+  #video-wrapper
+    margin: 150px 20px 10px 20px
+
+  #text-wrapper
+    margin: 20px 20px
+
+
+.side-nav
+  margin: 130px 10px 5px 5px
+  padding: 2px
+  .side-thumbs
+    .side-thumb-container
+      width: 150px
+      padding: 5px 5px 1px 5px
+      margin: 0px -5px -10px -5px
+      transition: all .2s ease-in-out
+      > img
+        filter: grayscale(1) brightness(50%)
+        width: 100%
+        height: auto
+        transition: all .2s ease-in-out
+      &:hover
+        box-shadow: inset 2px 2px 0px #bbb, inset -2px -2px 0px #bbb
+        img
+          filter: grayscale(0)
+      &.active
+        box-shadow: inset 2px 2px 0px #666, inset -2px -2px 0px #666
+        img
+          filter: grayscale(0)
+
+.side-images-wrapper
+  margin: 150px 10px 5px 0px
+  .side-images
+    .side-image-container
+      width: 200px
+      > a img
+        width: 100%
+        height: auto

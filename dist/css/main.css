@@ -146,7 +146,7 @@ td, th {
 body {
   font-family: "Josefin Sans", sans-serif;
   font-size: 1rem;
-  color: #999; }
+  color: #666; }
 
 li {
   list-style: none;
@@ -155,7 +155,7 @@ li {
 a {
   padding: 10px;
   text-decoration: none;
-  color: #999;
+  color: #666;
   transition: all 200ms ease-in-out; }
   a:hover {
     text-decoration: none;
@@ -232,7 +232,7 @@ header {
   margin-top: 0;
   position: fixed;
   width: 100vw;
-  height: 130px;
+  height: 100px;
   z-index: 10;
   background: white;
   display: flex;
@@ -251,17 +251,17 @@ header {
       transition: all .2s ease-in-out; }
   header #logo-header-container {
     position: relative;
-    margin: 20px;
+    margin: 0px 20px 20px 20px;
     background: rgba(255, 255, 255, 0.8);
-    width: 130px;
+    width: 100px;
     background: #aaa;
-    height: 130px;
+    height: 100px;
     border-radius: 50%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     transition: all 300ms ease-in-out;
-    border: 3px solid #aaa; }
+    border: 3px solid #999; }
     header #logo-header-container:hover {
       border: 3px solid #666; }
     header #logo-header-container a {
@@ -273,7 +273,7 @@ header {
       background: pink; }
     header #logo-header-container #logo-header {
       margin: 0 auto;
-      width: 100px;
+      width: 75px;
       background: #aaa; }
 
 #dropdown-button {
@@ -690,60 +690,104 @@ header {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-around; }
-    #video-thumbnail-gallery #thumbnail-wrapper .thumbnail {
-      margin: 20px; }
-      #video-thumbnail-gallery #thumbnail-wrapper .thumbnail a {
-        position: relative;
-        text-align: center;
-        display: flex;
-        flex-direction: column; }
-        #video-thumbnail-gallery #thumbnail-wrapper .thumbnail a h3 {
-          margin: 10px; }
-        #video-thumbnail-gallery #thumbnail-wrapper .thumbnail a img {
-          margin: 0 auto;
-          width: calc(295px);
-          height: calc(166px); }
-          @media (min-width: 750px) {
-            #video-thumbnail-gallery #thumbnail-wrapper .thumbnail a img {
-              width: calc(295px * 1.5);
-              height: calc(166px * 1.5); } }
-        #video-thumbnail-gallery #thumbnail-wrapper .thumbnail a .overlay-text {
-          color: #eee;
-          background: rgba(0, 0, 0, 0.4);
-          padding: 30px;
-          border-radius: 3px;
-          font-weight: bold;
-          position: absolute;
-          top: 60px;
-          display: none;
-          left: 20%;
-          right: 20%; }
-          @media (min-width: 750px) {
-            #video-thumbnail-gallery #thumbnail-wrapper .thumbnail a .overlay-text {
-              top: 100px;
-              font-size: 1.5rem; } }
-          @media (max-width: 650px) {
-            #video-thumbnail-gallery #thumbnail-wrapper .thumbnail a .overlay-text {
-              display: block;
-              animation-name: overlay;
-              animation-duration: 300ms;
-              animation-timing-funtion: ease-in-out;
-              animation-fill-mode: forwards; } }
-        #video-thumbnail-gallery #thumbnail-wrapper .thumbnail a:hover > .overlay-text {
-          display: block;
-          animation-name: overlay;
-          animation-duration: 300ms;
-          animation-timing-funtion: ease-in-out;
-          animation-fill-mode: forwards; }
+    justify-content: space-around;
+    padding-bottom: 50px; }
+    #video-thumbnail-gallery #thumbnail-wrapper .thumbnail-list-item {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      text-align: center;
+      transition: all .2s ease-in-out;
+      border-radius: 2px; }
+      #video-thumbnail-gallery #thumbnail-wrapper .thumbnail-list-item:hover {
+        box-shadow: inset 2px 2px 0px 0px #bbb, inset -2px -2px 0px 0px #bbb; }
+      #video-thumbnail-gallery #thumbnail-wrapper .thumbnail-list-item .thumb {
+        width: 150px; }
+        #video-thumbnail-gallery #thumbnail-wrapper .thumbnail-list-item .thumb img {
+          width: 100%;
+          height: auto; }
+      #video-thumbnail-gallery #thumbnail-wrapper .thumbnail-list-item .thumb-title {
+        padding: 20px; }
 
-@keyframes overlay {
-  0% {
-    opacity: 0;
-    transform: translateY(70px) scale(0.3); }
-  100% {
-    opacity: 1;
-    transform: translateY(0px) scale(1); } }
+#video-page-wrapper {
+  display: flex;
+  margin-top: 0px; }
+  #video-page-wrapper #video-wrapper > .side-nav {
+    margin: 0; }
+  #video-page-wrapper #video-wrapper {
+    margin: 150px 20px 10px 20px; }
+  #video-page-wrapper #text-wrapper {
+    margin: 20px 20px; }
+
+.side-nav {
+  margin: 130px 10px 5px 5px;
+  padding: 2px; }
+  .side-nav .side-thumbs .side-thumb-container {
+    width: 150px;
+    padding: 5px 5px 1px 5px;
+    margin: 0px -5px -10px -5px;
+    transition: all .2s ease-in-out; }
+    .side-nav .side-thumbs .side-thumb-container > img {
+      filter: grayscale(1) brightness(50%);
+      width: 100%;
+      height: auto;
+      transition: all .2s ease-in-out; }
+    .side-nav .side-thumbs .side-thumb-container:hover {
+      box-shadow: inset 2px 2px 0px #bbb, inset -2px -2px 0px #bbb; }
+      .side-nav .side-thumbs .side-thumb-container:hover img {
+        filter: grayscale(0); }
+    .side-nav .side-thumbs .side-thumb-container.active {
+      box-shadow: inset 2px 2px 0px #666, inset -2px -2px 0px #666; }
+      .side-nav .side-thumbs .side-thumb-container.active img {
+        filter: grayscale(0); }
+
+.side-images-wrapper {
+  margin: 150px 10px 5px 0px; }
+  .side-images-wrapper .side-images .side-image-container {
+    width: 200px; }
+    .side-images-wrapper .side-images .side-image-container > a img {
+      width: 100%;
+      height: auto; }
+
+#photo-page-wrapper {
+  display: flex;
+  margin-top: 0px;
+  max-width: 900px;
+  margin: 0 auto; }
+  #photo-page-wrapper #photo-wrapper > .side-nav {
+    margin: 0; }
+  #photo-page-wrapper #photo-wrapper {
+    margin: 150px auto 0px auto;
+    width: 100%; }
+    #photo-page-wrapper #photo-wrapper > a img {
+      width: 100%;
+      height: auto;
+      margin: 0 auto; }
+  #photo-page-wrapper #text-wrapper {
+    margin: 20px 20px; }
+  #photo-page-wrapper > .photo-side-nav {
+    margin: 130px 10px 5px 5px;
+    padding: 2px; }
+    #photo-page-wrapper > .photo-side-nav .photo-side-thumbs .photo-side-thumb-container {
+      width: 100px;
+      padding: 5px 5px 1px 5px;
+      margin: 0px -5px -10px -5px;
+      transition: all .2s ease-in-out; }
+      #photo-page-wrapper > .photo-side-nav .photo-side-thumbs .photo-side-thumb-container > img {
+        width: 100%;
+        height: auto;
+        transition: all .2s ease-in-out; }
+      #photo-page-wrapper > .photo-side-nav .photo-side-thumbs .photo-side-thumb-container:hover {
+        box-shadow: inset 2px 2px 0px #bbb, inset -2px -2px 0px #bbb; }
+      #photo-page-wrapper > .photo-side-nav .photo-side-thumbs .photo-side-thumb-container.active {
+        box-shadow: inset 2px 2px 0px #666, inset -2px -2px 0px #666; }
+  #photo-page-wrapper .photo-side-images-wrapper {
+    margin: 150px 10px 5px 0px; }
+    #photo-page-wrapper .photo-side-images-wrapper .photo-side-images .photo-side-image-container {
+      width: 200px; }
+      #photo-page-wrapper .photo-side-images-wrapper .photo-side-images .photo-side-image-container > a img {
+        width: 100%;
+        height: auto; }
 
 #about-page {
   flex: 1;
@@ -794,7 +838,8 @@ footer {
   color: #555;
   text-align: center;
   align-self: flex-end;
-  width: 100%; }
+  width: 100%;
+  margin: 50px 0px 50px 0px; }
 
 @media (max-width: 750px) {
   #logo-container {

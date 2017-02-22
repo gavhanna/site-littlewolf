@@ -1,0 +1,54 @@
+// main: ../main.scss
+
+#photo-page-wrapper
+  display: flex
+  margin-top: 0px
+  max-width: 900px
+  margin: 0 auto
+
+  #photo-wrapper > .side-nav
+    margin: 0
+
+
+  #photo-wrapper
+    margin: 150px auto 0px auto
+    width: 100%
+    > a img
+      width: 100%
+      height: auto
+      margin: 0 auto
+
+  #text-wrapper
+    margin: 20px 20px
+
+  > .photo-side-nav
+    margin: 130px 10px 5px 5px
+    padding: 2px
+    .photo-side-thumbs
+      .photo-side-thumb-container
+        width: 100px
+        padding: 5px 5px 1px 5px
+        margin: 0px -5px -10px -5px
+        transition: all .2s ease-in-out
+        > img
+          //filter: grayscale(1) brightness(50%)
+          width: 100%
+          height: auto
+          transition: all .2s ease-in-out
+        &:hover
+          box-shadow: inset 2px 2px 0px #bbb, inset -2px -2px 0px #bbb
+          //img
+            filter: grayscale(0)
+        &.active
+          box-shadow: inset 2px 2px 0px #666, inset -2px -2px 0px #666
+          //img
+            filter: grayscale(0)
+
+  .photo-side-images-wrapper
+    margin: 150px 10px 5px 0px
+    .photo-side-images
+      .photo-side-image-container
+        width: 200px
+        > a img
+          width: 100%
+          height: auto

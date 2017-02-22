@@ -6,6 +6,7 @@ $(document).ready(function(){
     $(this).toggleClass("become-x");
   });
 
+  $("#video-wrapper").fitVids()
 
   $( '.swipebox' ).swipebox({
       loopAtEnd: true
@@ -25,21 +26,4 @@ $(document).ready(function(){
           margins : 50,
       });
     }
-
-
-    // $(window).on("resize",function(){
-    //    if($(window).width()<650){
-    //      $("#gallery").justifiedGallery({
-    //          rowHeight : 150,
-    //          lastRow : 'justify',
-    //          margins : 50,
-    //      });  //
-    //    } else {
-    //      $("#gallery").justifiedGallery({
-    //          rowHeight : 400,
-    //          lastRow : 'justify',
-    //          margins : 50,
-    //      });  //...
-    //    }
-    // });
 });

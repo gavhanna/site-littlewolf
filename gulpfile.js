@@ -83,7 +83,7 @@ gulp.task('build', function(callback) {
 });
 
 gulp.task('watch', ['browserSync', 'sass', 'nunjucks'], function(){
-  gulp.watch('app/scss/**/*.scss', ['sass']);
+  gulp.watch('app/scss/**/*.s*ss', ['sass']);
   gulp.watch('app/*.html', browserSync.reload);
   gulp.watch('app/templates/*.html', ['nunjucks']);
   gulp.watch('app/js/**/*.js', browserSync.reload);

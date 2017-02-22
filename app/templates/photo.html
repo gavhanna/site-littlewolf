@@ -1,0 +1,61 @@
+{% extends "default.html" %}
+
+{% block content %}
+<div id="photo-page-wrapper">
+  <div class="photo-side-nav">
+    <div class="photo-side-thumbs">
+      <a href="photo-black-lines.html">
+        <div class="photo-side-thumb-container">
+          <img src="img/photo_thumbs/Place 1.jpg" alt="">
+        </div>
+      </a>
+      <a href="photo-valley-of-the-shadow.html">
+        <div class="photo-side-thumb-container">
+          <img src="img/photo_thumbs/Place 2.jpg" alt="">
+        </div>
+      </a>
+      <a href="photo-multipass.html">
+        <div class="photo-side-thumb-container">
+          <img src="img/photo_thumbs/Place 3.jpg" alt="">
+        </div>
+      </a>
+      <a href="photo-the-choice.html">
+        <div class="photo-side-thumb-container">
+          <img src="img/photo_thumbs/Place 4.jpg" alt="">
+        </div>
+      </a>
+      <a href="photo-free.html">
+        <div class="photo-side-thumb-container">
+          <img src="img/photo_thumbs/Place 5.jpg" alt="">
+        </div>
+      </a>
+      <a href="photo-spring-street.html">
+        <div class="photo-side-thumb-container">
+          <img src="img/photo_thumbs/Place 6.jpg" alt="">
+        </div>
+      </a>
+      <a href="photo-venus.html">
+        <div class="photo-side-thumb-container">
+          <img src="img/photo_thumbs/Place 7.jpg" alt="">
+        </div>
+      </a>
+      <a href="photo-everything.html">
+        <div class="photo-side-thumb-container">
+          <img src="img/photo_thumbs/Place 8.jpg" alt="">
+        </div>
+      </a>
+      <a href="photo-black-mirror.html">
+        <div class="photo-side-thumb-container">
+          <img src="img/photo_thumbs/Place 9.jpg" alt="">
+        </div>
+      </a>
+    </div>
+  </div>
+    <div id="main-content">
+      <div id="photo-wrapper">
+        {% block image %}{% endblock %}
+      </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}
