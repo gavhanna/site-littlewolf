@@ -25,27 +25,32 @@
     max-width: 700px
     margin: 0 auto
 
-    .collabs
-      margin: 30px
-      padding: 30px
-      border: solid 3px rgba(30, 30, 30, 0.2)
-      border-radius: 4px
-      h2
-        cursor: default
-      i
-        cursor: pointer
-      @media (max-width: 560px)
-        i
-          color: #666
-        .fa-facebook:hover
-          color: blue
-        .fa-instagram:hover
-          color: #e43463
+    .collab
+      display: flex
+      max-width: 600px
+      .logo-container
+        width: 200px
+        > img
+          width: 100%
+          height: auto
 
 
-    .collab-logo
-      width: 200px
-      height: 200px
-      margin: 10px 10px 20px 10px
-      border-radius: 50%
-      border: 2px solid #666
+.logo, .name, .links
+  display: flex
+  flex-direction: column
+  justify-content: center
+  margin: 10px
+  width: 300px
+
+.no-logo
+  margin-top: 50px
+
+.links
+  flex-direction: row
+  > a
+    display: flex
+    flex-direction: column
+    justify-content: center
+
+.fa-globe:hover
+  color: lighten(blue, 20%)
