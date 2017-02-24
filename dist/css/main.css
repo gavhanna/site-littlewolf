@@ -799,11 +799,11 @@ header {
     display: flex;
     justify-content: center; }
     #photo-page-wrapper #photo-wrapper > a {
-      padding: 0 10px; }
+      padding: 0; }
       #photo-page-wrapper #photo-wrapper > a .title {
         display: block;
         width: 100%;
-        text-align: right; }
+        text-align: right !important; }
     #photo-page-wrapper #photo-wrapper > a img {
       width: 100%;
       height: auto;
