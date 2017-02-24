@@ -1,8 +1,14 @@
 // main: ../main.scss
 
-$logo-color: #aaa
+$logo-color: #333
 $transparent: rgba(255,255,255,0.8)
 $breakpoint: 850px
+
+
+.nav-wrapper
+  position: relative
+  width: 100%
+  max-width: 1200px
 
 header
   background: $transparent
@@ -15,11 +21,17 @@ header
   display: flex
   justify-content: center
   margin: auto
+  left: 0
+  right: 0
   ul
     background: $transparent
     display: flex
     justify-content: center
     padding: 40px
+    position: fixed
+    top: 0
+    left: 0
+    right: 0
     @media (max-width: 750px)
       padding: 0px
     li
@@ -29,7 +41,8 @@ header
 
   #logo-header-container
     position: relative
-    margin: 0px 20px 20px 20px
+    left: 0
+    margin: 0px 20px 20px 5px
     background: $transparent
     width: 130px
     background: $logo-color
@@ -39,7 +52,8 @@ header
     flex-direction: column
     justify-content: center
     transition: all 300ms ease-in-out
-    border: 3px solid #999
+    border: 3px solid #333
+    z-index: 1
     &:hover
       border: 3px solid #666
     a

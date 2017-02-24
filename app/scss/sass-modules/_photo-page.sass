@@ -1,10 +1,14 @@
 // main: ../main.scss
 
+@media screen and (min-width: 800px)
+  #main-content
+    width: 100%
+
 #photo-page-wrapper
   display: flex
   margin-top: 0px
-  max-width: 100%
-  margin: 0 auto
+  width: 100%
+  margin: 50px auto
 
   #photo-wrapper > .side-nav
     margin: 0
@@ -26,13 +30,14 @@
       height: auto
       margin: 0 auto
     .portrait
-      width: 50%
+      max-width: 50%
+      margin: 0 auto
       #portrait
         .title
           display: block
           width: 100%
           text-align: right
-        width: 100%
+        max-width: 100%
         margin: 0 auto
 
   #text-wrapper
@@ -40,7 +45,7 @@
 
   > .photo-side-nav
     margin: 128px 10px 5px 5px
-    padding: 2px
+    padding: 1px
     .photo-side-thumbs
       .photo-side-thumb-container
         width: 100px
@@ -74,6 +79,8 @@
   display: none
 
 @media screen and (max-width: 800px)
+
+
   #photo-wrapper
     display: none
     > a
