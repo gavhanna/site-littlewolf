@@ -484,8 +484,8 @@ header {
     position: relative;
     background: #333;
     border-radius: 50%;
-    width: 375px;
-    height: 375px;
+    width: calc(375px * .75);
+    height: calc(375px * .75);
     margin: auto;
     transition: none; }
     #landing-page #logo-container a {
@@ -498,13 +498,13 @@ header {
           top: 20%;
           left: 13.5%; } }
       #landing-page #logo-container a #logo {
-        width: 300px;
-        height: 219.16px;
+        width: calc(300px * .75);
+        height: calc(219.16px * .75);
         background: #333; }
         @media (max-width: 750px) {
           #landing-page #logo-container a #logo {
-            width: 200px;
-            height: 159.6px; } }
+            width: calc(200px * .85);
+            height: calc(159.6px * .85); } }
     #landing-page #logo-container div {
       position: absolute;
       bottom: 5%;
@@ -531,8 +531,8 @@ header {
         animation-delay: .5s; }
     @media (max-width: 750px) {
       #landing-page #logo-container {
-        width: 300px;
-        height: 300px; }
+        width: calc(300px * .85);
+        height: calc(300px * .85); }
         #landing-page #logo-container #logo {
           width: 250px;
           height: 169.6;
